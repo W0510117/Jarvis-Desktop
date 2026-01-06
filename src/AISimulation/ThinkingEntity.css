@@ -1,0 +1,16 @@
+.thinking-entity {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.thinking-entity {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 50;
+}

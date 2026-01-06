@@ -1,0 +1,42 @@
+{
+  "name": "jarvis-desktop",
+  "version": "1.0.0",
+  "description": "Jarvis Desktop AI",
+  "main": "main.js",
+  "scripts": {
+  "start": "npm run dev",
+  "react": "react-scripts start",
+  "electron": "electron .",
+  "dev": "concurrently \"npm run react\" \"wait-on http://localhost:3000 && npm run electron\""
+},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "electron": "^39.2.5",
+    "express": "^5.2.1",
+    "framer-motion": "^12.23.26",
+    "groq-sdk": "^0.37.0",
+    "markdown": "^0.5.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-scripts": "5.0.1",
+    "spotify-web-api-node": "^5.0.2",
+    "web-vitals": "^5.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "wait-on": "^9.0.3"
+  }
+}

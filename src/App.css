@@ -1,0 +1,120 @@
+/* MAIN LAYOUT */
+.app-container {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  color: #eee;
+  font-family: system-ui, sans-serif;
+  position: relative;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+/* CHAT AREA */
+.chat-area {
+  flex: 1;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  background: #181818;
+}
+
+.chat-row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.chat-row.you {
+  justify-content: flex-end;
+}
+
+.chat-row.jarvis {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #fff;
+  white-space: pre-wrap;
+}
+
+.chat-bubble.you {
+  background: #007bff;
+}
+
+.chat-bubble.jarvis {
+  background: #333;
+}
+
+.chat-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* INPUT AREA */
+.input-row {
+  margin-top: 10px;
+  display: flex;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #222;
+  color: #eee;
+}
+
+.send-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+}
+
+.thinking-indicator {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #00eaff;
+  letter-spacing: 1px;
+  border: 1px solid #00eaff;
+  border-radius: 8px;
+  background: rgba(0, 255, 255, 0.08);
+  box-shadow: 0 0 12px #00ffff88;
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+/* 🔵 Holographic pulsing animation */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+    box-shadow: 0 0 8px #00ffff44;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 16px #00ffffcc;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+    box-shadow: 0 0 8px #00ffff44;
+  }
+}

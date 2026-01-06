@@ -9,5 +9,12 @@ contextBridge.exposeInMainWorld("jarvis", {
     ipcRenderer.on("jarvis-timer", (event, message) => {
       callback(message);
     });
+  },
+
+  // Listen for Jarvis thinking events 
+  onThinking: (callback) => {
+    ipcRenderer.on("jarvis-thinking", (event, stage) => {
+      callback(stage);
+    });
   }
 });
